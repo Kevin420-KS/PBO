@@ -1,6 +1,4 @@
-// Nama : Kevin Sebastian Sihombing
-// NIM : 20230801011
-package TugasPBO;
+package ;//Sesuai nama file;
 
 import java.util.Scanner;
 
