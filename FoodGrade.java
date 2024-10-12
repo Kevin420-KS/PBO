@@ -1,4 +1,4 @@
-package PraktikumPBO.Sesi4;
+package Sesuai nama file folder;
 import java.util.Scanner;
 
 public class FoodGrade {
