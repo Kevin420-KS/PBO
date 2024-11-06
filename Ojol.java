@@ -1,5 +1,3 @@
-package TugasPBO;
-
 public class Ojol {
     
     // Kelas Supir
