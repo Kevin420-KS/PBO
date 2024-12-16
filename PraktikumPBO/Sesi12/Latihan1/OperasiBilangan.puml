@@ -1,0 +1,42 @@
+@startuml
+class OperasiBilangan {
+    protected double a, b, c
+    protected void set_A(double a)
+    protected void set_B(double b)
+    protected void set_C()
+    protected double get_A()
+    protected double get_B()
+    protected double get_C()
+    protected void tampil()
+}
+
+class OperasiPenjumlahan {
+    + void set_C()
+    + void tampil()
+}
+
+class OperasiPengurangan {
+    + void set_C()
+    + void tampil()
+}
+
+class OperasiPerkalian {
+    + void set_C()
+    + void tampil()
+}
+
+class OperasiPembagian {
+    + void set_C()
+    + void tampil()
+}
+
+class OperasiBilanganCetak {
+    - void cetakSemua(OperasiBilangan[] OB, double a, double b)
+}
+
+OperasiBilangan <|-- OperasiPenjumlahan
+OperasiBilangan <|-- OperasiPengurangan
+OperasiBilangan <|-- OperasiPerkalian
+OperasiBilangan <|-- OperasiPembagian
+OperasiBilanganCetak --> OperasiBilangan : menggunakan
+@enduml

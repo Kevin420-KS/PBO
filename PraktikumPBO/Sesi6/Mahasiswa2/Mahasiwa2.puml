@@ -1,0 +1,42 @@
+@startuml Mahasiswa2
+skinparam ClassAttributeIconSize 0
+
+class Jurusan {
+    - String nama
+    - String kode
+    --
+    + Jurusan(String nama, String kode)
+    + getNama(): String
+    + getKode(): String
+}
+
+class Mahasiswa {
+    - String nama
+    - String nim
+    - int umur
+    - Jurusan jurusan
+    --
+    + Mahasiswa(String nama, String nim, int umur, Jurusan jurusan)
+    + getNama(): String
+    + getNim(): String
+    + displayInfo(): void
+}
+
+class Kelas {
+    - String nama
+    - String kode
+    - ArrayList<Mahasiswa> daftarMahasiswa
+    --
+    + Kelas(String nama, String kode)
+    + addMahasiswa(Mahasiswa mahasiswa): void
+    + displayInfo(): void
+}
+
+class Mahasiswa2 {
+    + main(String[] args): void
+}
+
+Jurusan "1" --> "1..*" Mahasiswa : jurusan
+Kelas "1" --> "0..*" Mahasiswa : daftarMahasiswa
+
+@enduml

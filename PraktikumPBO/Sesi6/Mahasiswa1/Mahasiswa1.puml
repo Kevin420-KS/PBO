@@ -1,0 +1,39 @@
+@startuml Mahasiswa1 
+skinparam ClassAttributeIconSize 0
+  
+    class Jurusan {
+        - String nama
+        - String kode
+        + Jurusan(String nama, String kode)
+        + getNama() : String
+        + setNama(String nama) : void
+        + getKode() : String
+        + setKode(String kode) : void
+        + displayInfo() : void
+    }
+
+    class Mahasiswa {
+        - String nama
+        - String nim
+        - int usia
+        - Jurusan jurusan
+        + Mahasiswa(String nama, String nim, int usia, Jurusan jurusan)
+        + getNama() : String
+        + setNama(String nama) : void
+        + getNim() : String
+        + setNim(String nim) : void
+        + getUsia() : int
+        + setUsia(int usia) : void
+        + getJurusan() : Jurusan
+        + setJurusan(Jurusan jurusan) : void
+        + displayInfo() : void
+    }
+
+    class Mahasiswa1 {
+        + main(String[] args) : void
+    }
+
+    Mahasiswa1 --> Mahasiswa : "uses"
+    Mahasiswa *--> Jurusan : "has-a"
+
+@enduml

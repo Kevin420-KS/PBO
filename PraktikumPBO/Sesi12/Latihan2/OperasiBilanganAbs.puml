@@ -1,0 +1,78 @@
+@startuml
+
+abstract class OperasiBilanganAbs {
+    - double a
+    - double b
+    - double c
+    + void set_A(double a)
+    + void set_B(double b)
+    + void set_C()
+    + double get_A()
+    + double get_B()
+    + double get_C()
+    + void tampil()
+}
+
+class OperasiPenjumlahan {
+    - double a
+    - double b
+    - double c
+    + void set_A(double a)
+    + void set_B(double b)
+    + void set_C()
+    + double get_A()
+    + double get_B()
+    + double get_C()
+    + void tampil()
+}
+
+class OperasiPengurangan {
+    - double a
+    - double b
+    - double c
+    + void set_A(double a)
+    + void set_B(double b)
+    + void set_C()
+    + double get_A()
+    + double get_B()
+    + double get_C()
+    + void tampil()
+}
+
+class OperasiPerkalian {
+    - double a
+    - double b
+    - double c
+    + void set_A(double a)
+    + void set_B(double b)
+    + void set_C()
+    + double get_A()
+    + double get_B()
+    + double get_C()
+    + void tampil()
+}
+
+class OperasiPembagian {
+    - double a
+    - double b
+    - double c
+    + void set_A(double a)
+    + void set_B(double b)
+    + void set_C()
+    + double get_A()
+    + double get_B()
+    + double get_C()
+    + void tampil()
+}
+
+class OperasiBilanganAbsCetak {
+    - void cetakSemua(OperasiBilanganAbs[] OB, double a, double b)
+}
+
+OperasiBilanganAbs <|-- OperasiPenjumlahan
+OperasiBilanganAbs <|-- OperasiPengurangan
+OperasiBilanganAbs <|-- OperasiPerkalian
+OperasiBilanganAbs <|-- OperasiPembagian
+OperasiBilanganAbsCetak --> OperasiBilanganAbs
+
+@enduml
