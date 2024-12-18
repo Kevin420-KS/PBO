@@ -1,4 +1,4 @@
-package PraktikumPBO.Sesi13.No3;
+package PraktikumPBO.Sesi13.No3.Ortu;
 
 public interface Phone {
     int MAX_VOLUME = 100;

@@ -1,10 +1,12 @@
-package PraktikumPBO.Sesi13.No3;
+package PraktikumPBO.Sesi13.No3.Anak;
 
-public class Xiaomi implements Phone {
+import PraktikumPBO.Sesi13.No3.Ortu.Phone;
+
+public class Oppo implements Phone {
     private int volume;
     private boolean isPowerOn;
 
-    public Xiaomi() {
+    public Oppo() {
         this.volume = 50;
         this.isPowerOn = false;
     }
@@ -12,13 +14,13 @@ public class Xiaomi implements Phone {
     @Override
     public void powerOn() {
         isPowerOn = true;
-        System.out.println("Xiaomi phone is ON.");
+        System.out.println("Oppo phone is ON.");
     }
 
     @Override
     public void powerOff() {
         isPowerOn = false;
-        System.out.println("Xiaomi phone is OFF.");
+        System.out.println("Oppo phone is OFF.");
     }
 
     @Override
@@ -26,7 +28,7 @@ public class Xiaomi implements Phone {
         if (isPowerOn) {
             if (volume < MAX_VOLUME) {
                 volume += 10;
-                System.out.println("Xiaomi volume: " + volume);
+                System.out.println("Oppo volume: " + volume);
             } else {
                 System.out.println("Volume is at MAX!");
             }
@@ -40,7 +42,7 @@ public class Xiaomi implements Phone {
         if (isPowerOn) {
             if (volume > MIN_VOLUME) {
                 volume -= 10;
-                System.out.println("Xiaomi volume: " + volume);
+                System.out.println("Oppo volume: " + volume);
             } else {
                 System.out.println("Volume is at MIN!");
             }

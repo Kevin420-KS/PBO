@@ -1,4 +1,6 @@
-package PraktikumPBO.Sesi13.No3;
+package PraktikumPBO.Sesi13.No3.Anak;
+
+import PraktikumPBO.Sesi13.No3.Ortu.Phone;
 
 public class Samsung implements Phone {
     private int volume;
